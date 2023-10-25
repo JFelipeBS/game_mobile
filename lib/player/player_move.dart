@@ -13,7 +13,7 @@ class PlayerMove extends SimplePlayer with ObjectCollision {
         simpleAttackMelee(
           damage: 10,
           size: Vector2(40, 40),
-          animationRight: SpriteAbility.right,
+          animationRight: SpriteAbility.up,
           direction: lastDirection,
         );
       }
@@ -50,7 +50,7 @@ class PlayerMove extends SimplePlayer with ObjectCollision {
 
   PlayerMove()
       : super(
-          position: Vector2(tileSize * 5, tileSize * 5),
+          position: Vector2(tileSize * 10, tileSize * 10),
           size: Vector2(tileSize, tileSize),
           animation: SimpleDirectionAnimation(
             idleRight: SpritePlayer.stopRight,

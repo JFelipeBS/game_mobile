@@ -5,6 +5,12 @@ import 'package:jogo/enemy/enemy_move.dart';
 import 'package:jogo/main.dart';
 
 class EnemyGeneratorCOntroller extends StateController<EnemyMove> {
+  var score = 0;
+
+  void add() {
+    score++;
+  }
+
   final _position = [
     Vector2(tileSize * 4, tileSize * 4),
     Vector2(tileSize * 16, tileSize * 4),

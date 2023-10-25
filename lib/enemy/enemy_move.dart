@@ -26,6 +26,7 @@ class EnemyMove extends SimpleEnemy
 
   @override
   void die() {
+    controller.add();
     controller.returnMany();
     removeFromParent();
     super.die();
