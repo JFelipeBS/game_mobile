@@ -12,7 +12,7 @@ class EnemyGeneratorCOntroller extends StateController<EnemyMove> {
     Vector2(tileSize * 16, tileSize * 16),
   ];
 
-  final _quantityRespawns = 2;
+  final _quantityReturn = 2;
 
   void _return(Vector2 position) {
     final hasGameRef = component?.hasGameRef ?? false;
@@ -25,14 +25,14 @@ class EnemyGeneratorCOntroller extends StateController<EnemyMove> {
   void returnMany() {
     final random = Random();
     final positions = List<Vector2>.from(_position);
-    int numberOfRespawn = _quantityRespawns;
+    int numberOfreturn = _quantityReturn;
 
-    while (numberOfRespawn > 0) {
+    while (numberOfreturn > 0) {
       final indexPosition = random.nextInt(positions.length);
       final position = positions[indexPosition];
       _return(position);
       positions.remove(position);
-      numberOfRespawn -= 1;
+      numberOfreturn -= 1;
     }
   }
 
