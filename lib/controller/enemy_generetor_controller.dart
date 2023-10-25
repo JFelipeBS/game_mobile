@@ -12,12 +12,12 @@ class EnemyGeneratorCOntroller extends StateController<EnemyMove> {
   }
 
   final _position = [
-    Vector2(tileSize * 4, tileSize * 4),
-    Vector2(tileSize * 16, tileSize * 4),
-    Vector2(tileSize * 4, tileSize * 16),
-    Vector2(tileSize * 16, tileSize * 16),
-    Vector2(tileSize * 6, tileSize * 10),
-    Vector2(tileSize * 15, tileSize * 16),
+    Vector2(tileSize * 8, tileSize * 7),
+    Vector2(tileSize * 15, tileSize * 7),
+    Vector2(tileSize * 8, tileSize * 21),
+    Vector2(tileSize * 17, tileSize * 21),
+    Vector2(tileSize * 12, tileSize * 17),
+    Vector2(tileSize * 20, tileSize * 21),
   ];
 
   final _quantityReturn = 2;

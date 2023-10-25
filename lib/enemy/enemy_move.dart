@@ -18,7 +18,7 @@ class EnemyMove extends SimpleEnemy
           withPush: true,
         );
       },
-      radiusVision: tileSize * 15,
+      radiusVision: tileSize * 40,
     );
 
     super.update(dt);

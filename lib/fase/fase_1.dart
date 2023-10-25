@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:bonfire/bonfire.dart';
-import 'package:jogo/controller/enemy_generetor_controller.dart';
 import 'package:jogo/enemy/enemy_move.dart';
 import 'package:jogo/fase/score.dart';
+import 'package:jogo/interface/player_interface.dart';
 import 'package:jogo/main.dart';
 import 'package:jogo/player/player_move.dart';
 
@@ -23,7 +23,6 @@ class _MyAppState extends State<Fase1> implements GameListener {
 
   @override
   Widget build(BuildContext context) {
-    final controller = BonfireInjector.instance.get<EnemyGeneratorCOntroller>();
     return BonfireWidget(
       gameController: gameController,
       joystick: Joystick(
@@ -43,14 +42,21 @@ class _MyAppState extends State<Fase1> implements GameListener {
         forceTileSize: Vector2(32, 32),
       ),
       player: PlayerMove(),
+      overlayBuilderMap: {
+        PlayerInterface.overlayKey: (context, game) =>
+            PlayerInterface(game: game),
+      },
+      initialActiveOverlays: const [
+        PlayerInterface.overlayKey,
+      ],
       cameraConfig: CameraConfig(
         moveOnlyMapArea: true,
-        zoom: 1.5,
+        zoom: 1,
         smoothCameraEnabled: true,
       ),
       lightingColorGame: Colors.black.withOpacity(0.5),
       components: [
-        EnemyMove(position: Vector2(tileSize * 1, tileSize * 1)),
+        EnemyMove(position: Vector2(tileSize * 10, tileSize * 20)),
       ],
     );
   }

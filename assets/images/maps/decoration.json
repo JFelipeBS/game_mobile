@@ -6,19 +6,48 @@
  "name":"decoration",
  "spacing":0,
  "tilecount":121,
- "tiledversion":"1.8.4",
+ "tiledversion":"1.10.2",
  "tileheight":16,
  "tiles":[
         {
+         "id":35,
+         "type":"above"
+        }, 
+        {
          "id":38,
          "type":"above"
+        }, 
+        {
+         "id":46,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "id":2,
+             "name":"",
+             "objects":[
+                    {
+                     "height":10.952872377021,
+                     "id":1,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":11.9986240110079,
+                     "x":2.03646370829033,
+                     "y":0.0275197798417613
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            }
         }, 
         {
          "id":49,
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -52,7 +81,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -78,7 +106,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -102,5 +129,5 @@
  "tilewidth":16,
  "transparentcolor":"#ffffff",
  "type":"tileset",
- "version":"1.8"
+ "version":"1.10"
 }

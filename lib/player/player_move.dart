@@ -50,7 +50,7 @@ class PlayerMove extends SimplePlayer with ObjectCollision {
 
   PlayerMove()
       : super(
-          position: Vector2(tileSize * 10, tileSize * 10),
+          position: Vector2(tileSize * 15, tileSize * 15),
           size: Vector2(tileSize, tileSize),
           animation: SimpleDirectionAnimation(
             idleRight: SpritePlayer.stopRight,
