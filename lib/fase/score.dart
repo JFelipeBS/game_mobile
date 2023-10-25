@@ -46,6 +46,7 @@ class Score extends StatelessWidget {
                         backgroundColor:
                             MaterialStatePropertyAll(Colors.green[900])),
                     onPressed: () {
+                      controller.score = 0;
                       Navigator.pushAndRemoveUntil(
                           context,
                           MaterialPageRoute(

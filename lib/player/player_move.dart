@@ -64,7 +64,7 @@ class PlayerMove extends SimplePlayer with ObjectCollision {
         collisions: [
           CollisionArea.rectangle(
             size: Vector2(20, 20),
-            align: Vector2(6, 15),
+            align: Vector2(8, 16),
           ),
         ],
       ),
